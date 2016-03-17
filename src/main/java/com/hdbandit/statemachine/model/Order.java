@@ -16,6 +16,8 @@ public class Order {
     
     private OrderStatus orderStatus;
 
+    //  La marcamos como transient para no persistirla.
+    //  Únicamente se persistirá la column orderStatus
     @Transient
     private FSM<OrderEvent, OrderStatus> fsm;
     
